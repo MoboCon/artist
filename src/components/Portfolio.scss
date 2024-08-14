@@ -1,0 +1,143 @@
+.portfolio {
+  padding: 4rem 2rem;
+  background: linear-gradient(45deg, #1b3a57, #2e5077);
+  color: #fff;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  background-attachment: fixed;
+
+  .portfolio-title {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    color: #eaeaea;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    animation: fadeInDown 1.5s ease;
+  }
+
+  .filter-container {
+    margin-bottom: 2rem;
+
+    label {
+      margin-right: 1rem;
+      font-size: 1.4rem;
+      color: #ff6f61;
+    }
+
+    select {
+      padding: 0.7rem;
+      border-radius: 10px;
+      border: none;
+      background: linear-gradient(45deg, #ff6f61, #e55b50);
+      color: #fff;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: linear-gradient(45deg, #e55b50, #ff6f61);
+      }
+    }
+  }
+
+  .portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .portfolio-item {
+    background: #840000;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    width: 320px;
+
+    &:hover {
+      transform: translateY(-20px) rotate(2deg);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .portfolio-image-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+
+      .portfolio-image {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        transition: transform 0.5s ease, filter 0.5s ease;
+        filter: grayscale(100%);
+      }
+
+      &:hover .portfolio-image {
+        transform: scale(1.15);
+        filter: grayscale(0) brightness(0.8);
+      }
+
+      .portfolio-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        padding: 1.5rem;
+        transform: translateY(20px);
+        transition: all 0.5s ease;
+
+        h2 {
+          font-size: 2rem;
+          margin-bottom: 1.5rem;
+          text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        p {
+          font-size: 1.2rem;
+          margin-bottom: 2rem;
+        }
+
+        .view-details-button {
+          background: #ff6f61;
+          color: #fff;
+          border: none;
+          padding: 0.7rem 1.5rem;
+          font-size: 1.2rem;
+          cursor: pointer;
+          border-radius: 10px;
+          transition: background 0.3s ease;
+
+          &:hover {
+            background: #e4dcdc;
+          }
+        }
+      }
+
+      &:hover .portfolio-overlay {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

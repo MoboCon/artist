@@ -1,0 +1,83 @@
+// src/components/CombinedSections.scss
+.combined-sections {
+  background: #001f3f; /* Blue navy background */
+  color: #ffffff;
+  padding: 6rem 2rem;
+  text-align: center;
+
+  h2 {
+    font-size: 3rem;
+    margin-block-end: 2rem;
+    color: #f8e71c; /* Yellow accent color */
+  }
+
+  section {
+    margin-block-end: 4rem;
+  }
+
+  .testimonials, .business-cards, .faq, .newsletter {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .testimonials-container, .cards-container, .faq-item {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .testimonial, .card-item, .faq-item {
+    background: #002f5f;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  .download-button {
+    display: inline-block;
+    background: #f8e71c;
+    color: #002f5f;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #ffdd00;
+    }
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    input {
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      border: none;
+      flex: 1;
+    }
+
+    button {
+      background: #f8e71c;
+      color: #002f5f;
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: #ffdd00;
+      }
+    }
+  }
+}

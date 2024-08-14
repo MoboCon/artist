@@ -1,0 +1,17 @@
+.divider {
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, #ff6b6b, #f06595);
+    margin: 40px auto;
+  }
+  
+  .decorative-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-image: url('/path-to-your-decorative-image.svg');
+    opacity: 0.5;
+  }
+  
